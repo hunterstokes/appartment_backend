@@ -1,9 +1,8 @@
 class ApartmentsController < ApplicationController
 
   def index
-    render html: "Is this working?"
-    Apartment.all
-
+    apartments = Apartment.all
+    render json: apartments
   end
 
   def create
